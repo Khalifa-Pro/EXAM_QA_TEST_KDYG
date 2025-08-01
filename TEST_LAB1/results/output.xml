@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-01T10:59:02.932356" rpa="false" schemaversion="5">
+<suite id="s1" name="TEST LAB1" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB1">
+<suite id="s1-s1" name="Testcases" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB1\testcases">
+<suite id="s1-s1-s1" name="Carts Tests" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB1\testcases\carts_tests.robot">
+<kw name="Setup All Sessions" type="SETUP">
+<kw name="Create Session To FakeStore" owner="carts_keywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-08-01T10:59:04.350213" level="INFO">Creating Session using : alias=fakestore, url=https://fakestoreapi.com, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>fakestore</arg>
+<arg>${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-08-01T10:59:04.349201" elapsed="0.001761"/>
+</kw>
+<status status="PASS" start="2025-08-01T10:59:04.346818" elapsed="0.004512"/>
+</kw>
+<kw name="Create Session To MongoDB" owner="carts_keywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-08-01T10:59:04.353924" level="INFO">Creating Session using : alias=mongodb, url=mongodb+srv://diadhiouababacarpro:gFyrdr0P2GTcmLIJ@CluterMongo.mongodb.net/fakestore?retryWrites=true&amp;w=majority, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mongodb</arg>
+<arg>${DB_URI}</arg>
+<arg>headers=${HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-08-01T10:59:04.352892" elapsed="0.001964"/>
+</kw>
+<status status="PASS" start="2025-08-01T10:59:04.351657" elapsed="0.003525"/>
+</kw>
+<status status="PASS" start="2025-08-01T10:59:04.345360" elapsed="0.010033"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Get all carts" line="15">
+<kw name="Get All Carts" owner="carts_keywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-08-01T10:59:04.907357" level="INFO">GET Request : url=https://fakestoreapi.com/carts 
+ path_url=/carts 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg time="2025-08-01T10:59:04.907847" level="INFO">GET Response : url=https://fakestoreapi.com/carts 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 01 Aug 2025 10:59:04 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"3a8-j3C8983spvK8GpaSYa+SyYlAS2A"', 'X-Powered-By': 'Express', 'Cf-Cache-Status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=wlGog9B6oqRPdfQcwod%2FWBRF6HpnJWtj7P8%2Bz57B1XtjFTrw2AJTss8Qtb4g3ReZ0Sv0J6S7qbl2L95r%2Fn%2Fmn6N6L3qACWdCHYrtdLEJ6mU%3D"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9684d2f14843e288-MRS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":1,"userId":1,"date":"2020-03-02T00:00:00.000Z","products":[{"productId":1,"quantity":4},{"productId":2,"quantity":1},{"productId":3,"quantity":6}],"__v":0},{"id":2,"userId":1,"date":"2020-01-02T00:00:00.000Z","products":[{"productId":2,"quantity":4},{"productId":1,"quantity":10},{"productId":5,"quantity":2}],"__v":0},{"id":3,"userId":2,"date":"2020-03-01T00:00:00.000Z","products":[{"productId":1,"quantity":2},{"productId":9,"quantity":1}],"__v":0},{"id":4,"userId":3,"date":"2020-01-01T00:00:00.000Z","products":[{"productId":1,"quantity":4}],"__v":0},{"id":5,"userId":3,"date":"2020-03-01T00:00:00.000Z","products":[{"productId":7,"quantity":1},{"productId":8,"quantity":1}],"__v":0},{"id":6,"userId":4,"date":"2020-03-01T00:00:00.000Z","products":[{"productId":10,"quantity":2},{"productId":12,"quantity":3}],"__v":0},{"id":7,"userId":8,"date":"2020-03-01T00:00:00.000Z","products":[{"productId":18,"quantity":1}],"__v":0}] 
+ </msg>
+<msg time="2025-08-01T10:59:04.908492" level="INFO">C:\Users\FINAPPS\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'fakestoreapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-08-01T10:59:04.909612" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>fakestore</arg>
+<arg>/carts</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-08-01T10:59:04.365883" elapsed="0.544090"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-08-01T10:59:04.912183" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-08-01T10:59:04.910473" elapsed="0.002054"/>
+</kw>
+<return>
+<value>${response.json()}</value>
+<status status="PASS" start="2025-08-01T10:59:04.912761" elapsed="0.000588"/>
+</return>
+<msg time="2025-08-01T10:59:04.914454" level="INFO">${carts} = [{'id': 1, 'userId': 1, 'date': '2020-03-02T00:00:00.000Z', 'products': [{'productId': 1, 'quantity': 4}, {'productId': 2, 'quantity': 1}, {'productId': 3, 'quantity': 6}], '__v': 0}, {'id': 2, 'userI...</msg>
+<var>${carts}</var>
+<status status="PASS" start="2025-08-01T10:59:04.364622" elapsed="0.550385"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-08-01T10:59:04.917198" level="INFO">Length is 7.</msg>
+<arg>${carts}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-08-01T10:59:04.916238" elapsed="0.001763"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${carts}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-01T10:59:04.918778" elapsed="0.001795"/>
+</kw>
+<tag>carts</tag>
+<tag>positive1</tag>
+<status status="PASS" start="2025-08-01T10:59:04.355596" elapsed="0.565719"/>
+</test>
+<status status="PASS" start="2025-08-01T10:59:03.067234" elapsed="1.863481"/>
+</suite>
+<status status="PASS" start="2025-08-01T10:59:03.045027" elapsed="1.893832"/>
+</suite>
+<status status="PASS" start="2025-08-01T10:59:02.954302" elapsed="1.991011"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">carts</stat>
+<stat pass="1" fail="0" skip="0">positive1</stat>
+</tag>
+<suite>
+<stat name="TEST LAB1" id="s1" pass="1" fail="0" skip="0">TEST LAB1</stat>
+<stat name="Testcases" id="s1-s1" pass="1" fail="0" skip="0">TEST LAB1.Testcases</stat>
+<stat name="Carts Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">TEST LAB1.Testcases.Carts Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

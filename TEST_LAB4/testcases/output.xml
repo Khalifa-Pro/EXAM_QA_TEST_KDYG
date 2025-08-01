@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-07-29T16:40:15.034665" rpa="false" schemaversion="5">
+<suite id="s1" name="Mobile" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB4\testcases\mobile.robot">
+<kw name="Run Keyword" owner="BuiltIn" type="SETUP">
+<kw name="Open Application MyApp" owner="common">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-07-29T16:40:15.530375" elapsed="4.634888"/>
+</kw>
+<status status="PASS" start="2025-07-29T16:40:15.529903" elapsed="4.635749"/>
+</kw>
+<arg>Open Application MyApp</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-07-29T16:40:15.529125" elapsed="4.636660"/>
+</kw>
+<test id="s1-t1" name="Open Application and Login" line="12">
+<kw name="Enter username" owner="common">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${USERNAME}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:20.168436" elapsed="0.121808"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:20.296075" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(0)'.</msg>
+<arg>${USERNAME}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:20.290639" elapsed="0.163482"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:20.458430" level="INFO">Typing text 'johnd' into text field 'android=new UiSelector().className("android.widget.EditText").instance(0)'</msg>
+<arg>${USERNAME}</arg>
+<arg>johnd</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:20.454468" elapsed="0.124079"/>
+</kw>
+<status status="PASS" start="2025-07-29T16:40:20.167416" elapsed="0.411373"/>
+</kw>
+<kw name="Enter password" owner="common">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:20.580289" elapsed="0.602462"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:21.186674" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(1)'.</msg>
+<arg>${PASSWORD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:21.183046" elapsed="0.140882"/>
+</kw>
+<kw name="Input Password" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:21.327354" level="INFO">Typing password into text field 'android=new UiSelector().className("android.widget.EditText").instance(1)'</msg>
+<arg>${PASSWORD}</arg>
+<arg>m38rmF$</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:21.324292" elapsed="0.721402"/>
+</kw>
+<status status="PASS" start="2025-07-29T16:40:20.579547" elapsed="1.466344"/>
+</kw>
+<kw name="Log In" owner="common">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${LOGIN}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:22.046973" elapsed="0.576247"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:22.625353" level="INFO">Clicking element 'accessibility_id=Se connecter'.</msg>
+<arg>${LOGIN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:22.623470" elapsed="0.632371"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${PAGE_FORM}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-29T16:40:23.256655" elapsed="0.929190"/>
+</kw>
+<status status="PASS" start="2025-07-29T16:40:22.046412" elapsed="2.139897"/>
+</kw>
+<tag>"init"</tag>
+<status status="PASS" start="2025-07-29T16:40:20.165976" elapsed="4.022011"/>
+</test>
+<test id="s1-t2" name="Fill Form" line="18">
+<kw name="Enter Form Details" owner="common">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${FORM_TITLE}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:24.190950" elapsed="0.104324"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:24.297374" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(0)'.</msg>
+<arg>${FORM_TITLE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:24.295553" elapsed="1.129069"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:25.428890" level="INFO">Typing text 'Test Form Title' into text field 'android=new UiSelector().className("android.widget.EditText").instance(0)'</msg>
+<arg>${FORM_TITLE}</arg>
+<arg>Test Form Title</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:25.425639" elapsed="0.145481"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${FORM_PRICE}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:25.571348" elapsed="0.633971"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:26.207297" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(1)'.</msg>
+<arg>${FORM_PRICE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:26.205576" elapsed="0.815633"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:27.024136" level="INFO">Typing text '100' into text field 'android=new UiSelector().className("android.widget.EditText").instance(1)'</msg>
+<arg>${FORM_PRICE}</arg>
+<arg>100</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:27.021509" elapsed="0.144830"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${FORM_DESCRIPTION}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:27.166768" elapsed="0.622315"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:27.791139" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(2)'.</msg>
+<arg>${FORM_DESCRIPTION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:27.789335" elapsed="0.916502"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:28.710342" level="INFO">Typing text 'This is a test description.' into text field 'android=new UiSelector().className("android.widget.EditText").instance(2)'</msg>
+<arg>${FORM_DESCRIPTION}</arg>
+<arg>This is a test description.</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:28.706458" elapsed="0.138047"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${FORM_CATEGORIE}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:28.845081" elapsed="0.610607"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:29.459721" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(3)'.</msg>
+<arg>${FORM_CATEGORIE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:29.455972" elapsed="0.150973"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:29.611041" level="INFO">Typing text 'Test Category' into text field 'android=new UiSelector().className("android.widget.EditText").instance(3)'</msg>
+<arg>${FORM_CATEGORIE}</arg>
+<arg>Test Category</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:29.607245" elapsed="0.716450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${FORM_URL}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:30.323932" elapsed="0.614157"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:30.940038" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(4)'.</msg>
+<arg>${FORM_URL}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:30.938306" elapsed="0.153734"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:31.094791" level="INFO">Typing text '"C:UsersFINAPPSPicturesScreenshotsCapture d'écran 2025-05-17 194829.png"' into text field 'android=new UiSelector().className("android.widget.EditText").instance(4)'</msg>
+<arg>${FORM_URL}</arg>
+<arg>"C:\Users\FINAPPS\Pictures\Screenshots\Capture d'écran 2025-05-17 194829.png"</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:31.092281" elapsed="0.761454"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${FORM_BUTTON_ADD}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-07-29T16:40:31.853955" elapsed="0.736200"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-29T16:40:32.592110" level="INFO">Clicking element 'accessibility_id=Ajouter'.</msg>
+<arg>${FORM_BUTTON_ADD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-29T16:40:32.590432" elapsed="1.447376"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${PAGE_FORM}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-29T16:40:34.038493" elapsed="0.063631"/>
+</kw>
+<status status="PASS" start="2025-07-29T16:40:24.190591" elapsed="9.911685"/>
+</kw>
+<tag>"form"</tag>
+<status status="PASS" start="2025-07-29T16:40:24.189878" elapsed="9.912853"/>
+</test>
+<status status="PASS" start="2025-07-29T16:40:15.038937" elapsed="19.065069"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">"form"</stat>
+<stat pass="1" fail="0" skip="0">"init"</stat>
+</tag>
+<suite>
+<stat name="Mobile" id="s1" pass="2" fail="0" skip="0">Mobile</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

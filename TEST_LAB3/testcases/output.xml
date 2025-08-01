@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-01T15:51:15.472071" rpa="false" schemaversion="5">
+<suite id="s1" name="Fulfillement Api Test" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB3\testcases\fulfillement_api_test.robot">
+<kw name="Create Session To Fulfillment API" owner="fulfillement_api" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-08-01T15:51:16.752345" level="INFO">Creating Session using : alias=fulfillment, url=https://api.sandbox.ebay.com/sell/fulfillment/v1, headers={'Content-Type': 'application/json', 'Authorization': 'Bearer v^1.1#i^1#r^0#p^1#I^3#f^0#t^H4sIAAAAAAAA/+VYe2wURRi/6wsLbU2EgI+ql0VjtLm92dvbu92FO3KlFM7SB16tpYmpe7uz7bZ7u8vuLO2h4FkJqGACRg1ieAQJaEAEXyEIJoDpHyImYDEBQwyoQUF8RYPGB849LNdKoNBLbOL+s5lvvu+b7/vN95gZkCwpvW/ZnGUXyp3jCjYmQbLA6aQmgNKS4qqKwoJbix0gh8G5MXlXsqiv8OvplhBXDf4BaBm6ZkFXb1zVLD5NDBK2qfG6YCkWrwlxaPFI5KPh+rm8lwS8YepIF3WVcEVqggQd43wMTQM/SwV8nMhhqvaPzmY9SPi9AgBAomWOpkVWFPG8ZdkwollI0FCQ8AIv4wasG1DNFMP7WJ4GJAdAG+Fqgaal6BpmIQERSpvLp2XNHFuvbKpgWdBEWAkRioRro43hSM2shubpnhxdoSwOUSQg2xo6mqlL0NUiqDa88jJWmpuP2qIILYvwhDIrDFXKh/8x5jrMT0Pt5RhBFiSOCbAsg8HOC5S1uhkX0JXtSFEUyS2nWXmoIQUlroYoRiPWBUWUHTVgFZEaV+o3zxZURVagGSRmVYfnh5uaiFBdZ4omhN21tiorqhp3R6tb3T4QEzmKAT43YFivgKMsu1BGWxbmYSvN1DVJSYFmuRp0VA2x1XA4NnQONpipUWs0wzJKWZTLF8hiyHL+ttSmZnbRRp1aal9hHAPhSg+vvgOD0giZSsxGcFDD8Ik0REFCMAxFIoZPpmMxGz69VpDoRMjgPZ6enh6yhyZ1s8PjBYDytNbPjYqdMC4QmDeV6xl+5eoCbiXtigixpKXwKGFgW3pxrGIDtA4i5GMojuGyuA81KzSc+i9Cjs+eoRmRrwxh/AyMySIXkAOyVxbZfGRIKBuknpQdMCYk3HHB7IbIUAURukUcZ3YcmorE04zspVkZuiU/J7t9nCy7Y4zkd1MyhADCGI5l9v+UKCMN9SgUTYjyEut5i3Ozq42Oi10Nnua2elFukOfPbhDjOppr1S+sr6baBFDnmROONVZbLb7gSLPhss7PVBWMTDNePx8ApHI9fyDM0S0EpVG5FxV1AzbpqiImxtYG06bUJJgoUW0n8DgKVRX/RuVq2DAi+anYeXPyGovF9fmdv071H3Wpy3plpQJ3bHmVkrewAsFQSNyHUrmeIEU97tEFfAhJkdvTVruGMV6WyROzE2SHDS2ELZHwOXDEQgou5iRuadLIRTINEzsxchF8yZBsEV3XQunOTGI0lY5OZF3Tmr2jASVmq90jF5GgoI4qRBV81RhTAYo9zbisSJk7Apn2m7QWiqQJLd028fWIbEwdmZv1bqjhAwgydVWFZgs16tIbj9tIiKlwrNXgPNQiBee689cxdkKiAowP+GmaGl33ENPnn/ax1kHy3Tmv4SbkGfouE3KkP6rP+SHoc/YXOJ2gBripKnBvSeGDRYVlhIVrD2kJmhTTe0lFkElc9jQB2SYku2HCEBSzYKJj4Oyq6PwjdbtffH/RgifIGf2O0pznoY0Pg5sHH4hKC6kJOa9FoPLSTDF145RyLwNYQFGMj6VBG5h6abaImlw06aZtf9mBi8f39r2zYfux8DMv7HX8EQTlg0xOZ7EDx7Jj2rZ3D02aGt6x+jXuS63i81fYzZvufPqksOa5HqKDntG1f/Wx9RWP9P752RfHyuvOV7UeKH79q+OHXz73ZvsnbNeAXrVj7YrH553+5tOOZ49+J3PEjrNq8qe6vvFLtw6cOojWvrqnf/PuNy5cVJ4sbRt3evzsyoqatxd9vO7o5JJao7quotm/5NEf3/L/tqZl5/J1+yYS/WWVp+9fQR+eesP43+/Z/9KZ9VN+jpxbvb39liOttx9atX+JgSrpxse+P+o4oS/wLV+50jFwonhDb/9S5eIHz595apmx64fzW8WWii3fbv3lwObF4uLiO/Ymp0y7+7ZTH+3c9R5fdj6Q3FfHLN9UdnDPQyc5ZnYFu0rektnTvwEngMbmuBMAAA=='},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>fulfillment</arg>
+<arg>${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-08-01T15:51:16.751545" elapsed="0.001374"/>
+</kw>
+<status status="PASS" start="2025-08-01T15:51:16.750137" elapsed="0.003071"/>
+</kw>
+<test id="s1-t1" name="Get Orders Test" line="10">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-08-01T15:51:16.755443" level="INFO">${params} = {'limit': '5'}</msg>
+<var>${params}</var>
+<arg>limit=5</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-08-01T15:51:16.754631" elapsed="0.000917"/>
+</kw>
+<kw name="Get Orders" owner="fulfillement_api">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-08-01T15:51:17.608142" level="INFO">GET Request : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order?limit=5 
+ path_url=/sell/fulfillment/v1/order?limit=5 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer v^1.1#i^1#r^0#p^1#I^3#f^0#t^H4sIAAAAAAAA/+VYe2wURRi/6wsLbU2EgI+ql0VjtLm92dvbu92FO3KlFM7SB16tpYmpe7uz7bZ7u8vuLO2h4FkJqGACRg1ieAQJaEAEXyEIJoDpHyImYDEBQwyoQUF8RYPGB849LNdKoNBLbOL+s5lvvu+b7/vN95gZkCwpvW/ZnGUXyp3jCjYmQbLA6aQmgNKS4qqKwoJbix0gh8G5MXlXsqiv8OvplhBXDf4BaBm6ZkFXb1zVLD5NDBK2qfG6YCkWrwlxaPFI5KPh+rm8lwS8YepIF3WVcEVqggQd43wMTQM/SwV8nMhhqvaPzmY9SPi9AgBAomWOpkVWFPG8ZdkwollI0FCQ8AIv4wasG1DNFMP7WJ4GJAdAG+Fqgaal6BpmIQERSpvLp2XNHFuvbKpgWdBEWAkRioRro43hSM2shubpnhxdoSwOUSQg2xo6mqlL0NUiqDa88jJWmpuP2qIILYvwhDIrDFXKh/8x5jrMT0Pt5RhBFiSOCbAsg8HOC5S1uhkX0JXtSFEUyS2nWXmoIQUlroYoRiPWBUWUHTVgFZEaV+o3zxZURVagGSRmVYfnh5uaiFBdZ4omhN21tiorqhp3R6tb3T4QEzmKAT43YFivgKMsu1BGWxbmYSvN1DVJSYFmuRp0VA2x1XA4NnQONpipUWs0wzJKWZTLF8hiyHL+ttSmZnbRRp1aal9hHAPhSg+vvgOD0giZSsxGcFDD8Ik0REFCMAxFIoZPpmMxGz69VpDoRMjgPZ6enh6yhyZ1s8PjBYDytNbPjYqdMC4QmDeV6xl+5eoCbiXtigixpKXwKGFgW3pxrGIDtA4i5GMojuGyuA81KzSc+i9Cjs+eoRmRrwxh/AyMySIXkAOyVxbZfGRIKBuknpQdMCYk3HHB7IbIUAURukUcZ3YcmorE04zspVkZuiU/J7t9nCy7Y4zkd1MyhADCGI5l9v+UKCMN9SgUTYjyEut5i3Ozq42Oi10Nnua2elFukOfPbhDjOppr1S+sr6baBFDnmROONVZbLb7gSLPhss7PVBWMTDNePx8ApHI9fyDM0S0EpVG5FxV1AzbpqiImxtYG06bUJJgoUW0n8DgKVRX/RuVq2DAi+anYeXPyGovF9fmdv071H3Wpy3plpQJ3bHmVkrewAsFQSNyHUrmeIEU97tEFfAhJkdvTVruGMV6WyROzE2SHDS2ELZHwOXDEQgou5iRuadLIRTINEzsxchF8yZBsEV3XQunOTGI0lY5OZF3Tmr2jASVmq90jF5GgoI4qRBV81RhTAYo9zbisSJk7Apn2m7QWiqQJLd028fWIbEwdmZv1bqjhAwgydVWFZgs16tIbj9tIiKlwrNXgPNQiBee689cxdkKiAowP+GmaGl33ENPnn/ax1kHy3Tmv4SbkGfouE3KkP6rP+SHoc/YXOJ2gBripKnBvSeGDRYVlhIVrD2kJmhTTe0lFkElc9jQB2SYku2HCEBSzYKJj4Oyq6PwjdbtffH/RgifIGf2O0pznoY0Pg5sHH4hKC6kJOa9FoPLSTDF145RyLwNYQFGMj6VBG5h6abaImlw06aZtf9mBi8f39r2zYfux8DMv7HX8EQTlg0xOZ7EDx7Jj2rZ3D02aGt6x+jXuS63i81fYzZvufPqksOa5HqKDntG1f/Wx9RWP9P752RfHyuvOV7UeKH79q+OHXz73ZvsnbNeAXrVj7YrH553+5tOOZ49+J3PEjrNq8qe6vvFLtw6cOojWvrqnf/PuNy5cVJ4sbRt3evzsyoqatxd9vO7o5JJao7quotm/5NEf3/L/tqZl5/J1+yYS/WWVp+9fQR+eesP43+/Z/9KZ9VN+jpxbvb39liOttx9atX+JgSrpxse+P+o4oS/wLV+50jFwonhDb/9S5eIHz595apmx64fzW8WWii3fbv3lwObF4uLiO/Ymp0y7+7ZTH+3c9R5fdj6Q3FfHLN9UdnDPQyc5ZnYFu0rektnTvwEngMbmuBMAAA=='} 
+ body=None 
+ </msg>
+<msg time="2025-08-01T15:51:17.608469" level="INFO">GET Response : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order?limit=5 
+ status=403, reason=Forbidden 
+ headers={'rlogid': 't6pithqauq%60fiiw%28ufmadh%7B%3F%3Ctowiugvpd%60jhs.vgiggi%7F.01d73ece%3Ce*ri%7Ecw-19866549aab-0x2362', 'x-ebay-client-tls-version': 'TLSv1.3', 'x-content-type-options': 'nosniff', 'x-xss-protection': '0', 'cache-control': 'no-cache, no-store, max-age=0, must-revalidate', 'pragma': 'no-cache', 'expires': '0', 'x-frame-options': 'DENY', 'content-type': 'application/json', 'content-length': '159', 'date': 'Fri, 01 Aug 2025 15:51:17 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'ebay-proxy-server', 'strict-transport-security': 'max-age=31536000', 'x-ebay-pop-id': 'UFES2-LVSAZ01-apisandbox'} 
+ body={"errors":[{"errorId":1100,"domain":"ACCESS","category":"REQUEST","message":"Access denied","longMessage":"Insufficient permissions to fulfill the request."}]} 
+ </msg>
+<msg time="2025-08-01T15:51:17.608707" level="INFO">C:\Users\FINAPPS\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.sandbox.ebay.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-08-01T15:51:17.609187" level="FAIL">HTTPError: 403 Client Error: Forbidden for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order?limit=5</msg>
+<var>${response}</var>
+<arg>fulfillment</arg>
+<arg>/order</arg>
+<arg>params=${params}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-08-01T15:51:16.757286" elapsed="0.856710">HTTPError: 403 Client Error: Forbidden for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order?limit=5</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-08-01T15:51:17.614383" elapsed="0.000064"/>
+</kw>
+<return>
+<value>${response.json()}</value>
+<status status="NOT RUN" start="2025-08-01T15:51:17.614774" elapsed="0.000095"/>
+</return>
+<var>${orders}</var>
+<arg>${params}</arg>
+<status status="FAIL" start="2025-08-01T15:51:16.756361" elapsed="0.858805">HTTPError: 403 Client Error: Forbidden for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order?limit=5</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${orders}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-08-01T15:51:17.615751" elapsed="0.000084"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<var>${order_count}</var>
+<arg>${orders}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" start="2025-08-01T15:51:17.616349" elapsed="0.000060"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${orders}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-08-01T15:51:17.616889" elapsed="0.000062"/>
+</kw>
+<tag>positive1</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-08-01T15:51:16.753391" elapsed="0.864101">HTTPError: 403 Client Error: Forbidden for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order?limit=5</status>
+</test>
+<status status="FAIL" start="2025-08-01T15:51:15.475183" elapsed="2.143790"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">positive1</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Fulfillement Api Test" id="s1" pass="0" fail="1" skip="0">Fulfillement Api Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
