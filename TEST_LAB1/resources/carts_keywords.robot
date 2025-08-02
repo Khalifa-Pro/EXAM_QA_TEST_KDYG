@@ -7,8 +7,8 @@ Library           DatabaseLibrary
 Create Session To FakeStore
     Create Session    fakestore    ${BASE_URL}    headers=${HEADERS}
 
-Create Session To MongoDB
-    Create Session    mongodb    ${DB_URI}    headers=${HEADERS}
+# Create Session To MongoDB
+    # Create Session    mongodb    ${DB_URI}    headers=${HEADERS}
 
 
 # Cart Management Keywords

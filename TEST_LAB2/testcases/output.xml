@@ -1,114 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-07-25T15:04:21.101562" rpa="false" schemaversion="5">
-<suite id="s1" name="Open Log Add Customer Cancel" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB2\testcases\open_log_add_customer_cancel.robot">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-01T23:54:24.183908" rpa="false" schemaversion="5">
+<suite id="s1" name="Open And Log Missing" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB2\testcases\open_and_log_missing.robot">
 <test id="s1-t1" name="Open Home Page And Log In" line="6">
-<kw name="Should be able to cancel adding new customer" owner="open_log_add_customer_cancel">
+<kw name="Login should fail with missing credentials" owner="open_and_log_missing">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-25T15:04:21.419841" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<msg time="2025-08-01T23:54:24.787425" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/index.html'.</msg>
 <arg>${BASE_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-25T15:04:21.419574" elapsed="25.962535"/>
+<status status="PASS" start="2025-08-01T23:54:24.786904" elapsed="4.731104"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-25T15:04:47.382533" elapsed="0.049635"/>
+<status status="PASS" start="2025-08-01T23:54:29.518372" elapsed="0.060913"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CLICK_BUTTON_SIGNIN}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-07-25T15:04:47.432744" elapsed="0.063550"/>
+<status status="PASS" start="2025-08-01T23:54:29.580059" elapsed="0.076871"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${CLICK_BUTTON_SIGNIN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-08-01T23:54:29.657216" elapsed="0.077723"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-25T15:04:47.497110" level="INFO">Clicking element 'name=sign-in-link'.</msg>
+<msg time="2025-08-01T23:54:29.736179" level="INFO">Clicking element 'name=sign-in-link'.</msg>
 <arg>${CLICK_BUTTON_SIGNIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-25T15:04:47.496733" elapsed="0.685786"/>
+<status status="PASS" start="2025-08-01T23:54:29.735435" elapsed="0.662818"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOGIN_INPUT}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-07-25T15:04:48.182844" elapsed="0.049380"/>
+<status status="PASS" start="2025-08-01T23:54:30.398915" elapsed="0.051456"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-25T15:04:48.232763" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'name=email-name'.</msg>
+<msg time="2025-08-01T23:54:30.451562" level="INFO">Typing text '' into text field 'name=email-name'.</msg>
 <arg>${LOGIN_INPUT}</arg>
-<arg>${USERNAME}</arg>
+<arg>${USERNAME_MISSING}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-25T15:04:48.232451" elapsed="0.427673"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-25T15:04:48.661142" level="INFO">Typing text 'pwd' into text field 'name=password-name'.</msg>
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-25T15:04:48.660550" elapsed="0.188685"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-07-25T15:04:48.850228" level="INFO">Clicking button 'name=submit-name'.</msg>
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-25T15:04:48.849680" elapsed="0.171041"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ADD_NEW_CUSTOMER}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-07-25T15:04:49.021034" elapsed="1.202599"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-25T15:04:50.224571" level="INFO">Clicking element 'id=new-customer'.</msg>
-<arg>${ADD_NEW_CUSTOMER}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-25T15:04:50.224117" elapsed="0.645448"/>
+<status status="PASS" start="2025-08-01T23:54:30.450859" elapsed="0.182413"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-25T15:04:52.871038" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2025-08-01T23:54:35.635405" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-25T15:04:50.869844" elapsed="2.001305"/>
+<status status="PASS" start="2025-08-01T23:54:30.633794" elapsed="5.001778"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-25T15:04:52.871552" level="INFO">Clicking element 'xpath=//a[normalize-space(text())='Cancel']'.</msg>
-<arg>${CANCEL_NEW_CUSTOMER}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-25T15:04:52.871321" elapsed="0.451473"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-01T23:54:35.636097" level="INFO">Typing text '' into text field 'name=password-name'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_MISSING}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-01T23:54:35.635790" elapsed="0.171516"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2025-07-25T15:04:58.603093" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-07-25T15:04:58.603765" level="FAIL">Text 'id=new-customer' did not appear in 5 seconds.</msg>
-<arg>${ADD_NEW_CUSTOMER}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2025-07-25T15:04:53.323060" elapsed="5.286384">Text 'id=new-customer' did not appear in 5 seconds.</status>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-01T23:54:35.808111" level="INFO">Clicking button 'name=submit-name'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-01T23:54:35.807663" elapsed="0.209960"/>
 </kw>
-<doc>Fonctionnalité de test pour vérifier l'annulation de l'ajout d'un nouveau client</doc>
-<status status="FAIL" start="2025-07-25T15:04:21.418638" elapsed="37.191143">Text 'id=new-customer' did not appear in 5 seconds.</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-01T23:54:41.018681" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-01T23:54:36.017970" elapsed="5.001188"/>
 </kw>
-<kw name="close browser" owner="open_log_add_customer_cancel">
-<status status="NOT RUN" start="2025-07-25T15:04:58.610596" elapsed="0.000087"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-08-01T23:54:42.870494" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.183)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff73658e415+77285]
+	GetHandleVerifier [0x0x7ff73658e470+77376]
+	(No symbol) [0x0x7ff736359a6a]
+	(No symbol) [0x0x7ff736331f21]
+	(No symbol) [0x0x7ff7363df9be]
+	(No symbol) [0x0x7ff736400192]
+	(No symbol) [0x0x7ff7363d83e3]
+	(No symbol) [0x0x7ff7363a1521]
+	(No symbol) [0x0x7ff7363a22b3]
+	GetHandleVerifier [0x0x7ff736871efd+3107021]
+	GetHandleVerifier [0x0x7ff73686c29d+3083373]
+	GetHandleVerifier [0x0x7ff73688bedd+3213485]
+	GetHandleVerifier [0x0x7ff7365a884e+184862]
+	GetHandleVerifier [0x0x7ff7365b055f+216879]
+	GetHandleVerifier [0x0x7ff736597084+113236]
+	GetHandleVerifier [0x0x7ff736597239+113673]
+	GetHandleVerifier [0x0x7ff73657e298+11368]
+	BaseThreadInitThunk [0x0x7ffede4d257d+29]
+	RtlUserThreadStart [0x0x7ffedf50af08+40]
+</msg>
+<msg time="2025-08-01T23:54:42.874561" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.183)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff73658e415+77285]
+	GetHandleVerifier [0x0x7ff73658e470+77376]
+	(No symbol) [0x0x7ff736359a6a]
+	(No symbol) [0x0x7ff736331f21]
+	(No symbol) [0x0x7ff7363df9be]
+	(No symbol) [0x0x7ff736400192]
+	(No symbol) [0x0x7ff7363d83e3]
+	(No symbol) [0x0x7ff7363a1521]
+	(No symbol) [0x0x7ff7363a22b3]
+	GetHandleVerifier [0x0x7ff736871efd+3107021]
+	GetHandleVerifier [0x0x7ff73686c29d+3083373]
+	GetHandleVerifier [0x0x7ff73688bedd+3213485]
+	GetHandleVerifier [0x0x7ff7365a884e+184862]
+	GetHandleVerifier [0x0x7ff7365b055f+216879]
+	GetHandleVerifier [0x0x7ff736597084+113236]
+	GetHandleVerifier [0x0x7ff736597239+113673]
+	GetHandleVerifier [0x0x7ff73657e298+11368]
+	BaseThreadInitThunk [0x0x7ffede4d257d+29]
+	RtlUserThreadStart [0x0x7ffedf50af08+40]
+</msg>
+<arg>${SUCCESS_MESSAGE}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-08-01T23:54:41.020195" elapsed="1.875930">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.183)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff73658e415+77285]
+	GetHandleVerifier [0x0x7ff73658e470+77376]
+	(No symbol) [0x0x7ff736359a6a]
+	(No symbol) [0x0x7ff736331f21]
+	(No symbol) [0x0x7ff7363df9be]
+	(No symbol) [0x0x7ff736400192]
+	(No symbol) [0x0x7ff7363d83e3]
+	(No symbol) [0x0x7ff7363a1521]
+	(No symbol) [0x0x7ff7363a22b3]
+	GetHandleVerifier [0x0x7ff736871efd+3107021]
+	GetHandleVerifier [0x0x7ff73686c29d+3083373]
+	GetHandleVerifier [0x0x7ff73688bedd+3213485]
+	GetHandleVerifier [0x0x7ff7365a884e+184862]
+	GetHandleVerifier [0x0x7ff7365b055f+216879]
+	GetHandleVerifier [0x0x7ff736597084+113236]
+	GetHandleVerifier [0x0x7ff736597239+113673]
+	GetHandleVerifier [0x0x7ff73657e298+11368]
+	BaseThreadInitThunk [0x0x7ffede4d257d+29]
+	RtlUserThreadStart [0x0x7ffedf50af08+40]
+</status>
 </kw>
-<tag>openlogaddcustomerscancel</tag>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-08-01T23:54:42.896640" elapsed="0.000137"/>
+</kw>
+<status status="FAIL" start="2025-08-01T23:54:24.785857" elapsed="18.111618">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.183)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff73658e415+77285]
+	GetHandleVerifier [0x0x7ff73658e470+77376]
+	(No symbol) [0x0x7ff736359a6a]
+	(No symbol) [0x0x7ff736331f21]
+	(No symbol) [0x0x7ff7363df9be]
+	(No symbol) [0x0x7ff736400192]
+	(No symbol) [0x0x7ff7363d83e3]
+	(No symbol) [0x0x7ff7363a1521]
+	(No symbol) [0x0x7ff7363a22b3]
+	GetHandleVerifier [0x0x7ff736871efd+3107021]
+	GetHandleVerifier [0x0x7ff73686c29d+3083373]
+	GetHandleVerifier [0x0x7ff73688bedd+3213485]
+	GetHandleVerifier [0x0x7ff7365a884e+184862]
+	GetHandleVerifier [0x0x7ff7365b055f+216879]
+	GetHandleVerifier [0x0x7ff736597084+113236]
+	GetHandleVerifier [0x0x7ff736597239+113673]
+	GetHandleVerifier [0x0x7ff73657e298+11368]
+	BaseThreadInitThunk [0x0x7ffede4d257d+29]
+	RtlUserThreadStart [0x0x7ffedf50af08+40]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-08-01T23:54:42.899116" elapsed="0.000186"/>
+</kw>
+<tag>openlogmissing</tag>
 <tag>smoke</tag>
-<status status="FAIL" start="2025-07-25T15:04:21.417427" elapsed="37.194014">Text 'id=new-customer' did not appear in 5 seconds.</status>
+<status status="FAIL" start="2025-08-01T23:54:24.783565" elapsed="18.117197">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.183)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff73658e415+77285]
+	GetHandleVerifier [0x0x7ff73658e470+77376]
+	(No symbol) [0x0x7ff736359a6a]
+	(No symbol) [0x0x7ff736331f21]
+	(No symbol) [0x0x7ff7363df9be]
+	(No symbol) [0x0x7ff736400192]
+	(No symbol) [0x0x7ff7363d83e3]
+	(No symbol) [0x0x7ff7363a1521]
+	(No symbol) [0x0x7ff7363a22b3]
+	GetHandleVerifier [0x0x7ff736871efd+3107021]
+	GetHandleVerifier [0x0x7ff73686c29d+3083373]
+	GetHandleVerifier [0x0x7ff73688bedd+3213485]
+	GetHandleVerifier [0x0x7ff7365a884e+184862]
+	GetHandleVerifier [0x0x7ff7365b055f+216879]
+	GetHandleVerifier [0x0x7ff736597084+113236]
+	GetHandleVerifier [0x0x7ff736597239+113673]
+	GetHandleVerifier [0x0x7ff73657e298+11368]
+	BaseThreadInitThunk [0x0x7ffede4d257d+29]
+	RtlUserThreadStart [0x0x7ffedf50af08+40]
+</status>
 </test>
 <doc>Scénarios de test d'ouverture d'automatisation et de login</doc>
-<status status="FAIL" start="2025-07-25T15:04:21.105038" elapsed="37.508707"/>
+<status status="FAIL" start="2025-08-01T23:54:24.188979" elapsed="18.716244"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">openlogaddcustomerscancel</stat>
+<stat pass="0" fail="1" skip="0">openlogmissing</stat>
 <stat pass="0" fail="1" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Open Log Add Customer Cancel" id="s1" pass="0" fail="1" skip="0">Open Log Add Customer Cancel</stat>
+<stat name="Open And Log Missing" id="s1" pass="0" fail="1" skip="0">Open And Log Missing</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-08-01T23:54:42.870494" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.183)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff73658e415+77285]
+	GetHandleVerifier [0x0x7ff73658e470+77376]
+	(No symbol) [0x0x7ff736359a6a]
+	(No symbol) [0x0x7ff736331f21]
+	(No symbol) [0x0x7ff7363df9be]
+	(No symbol) [0x0x7ff736400192]
+	(No symbol) [0x0x7ff7363d83e3]
+	(No symbol) [0x0x7ff7363a1521]
+	(No symbol) [0x0x7ff7363a22b3]
+	GetHandleVerifier [0x0x7ff736871efd+3107021]
+	GetHandleVerifier [0x0x7ff73686c29d+3083373]
+	GetHandleVerifier [0x0x7ff73688bedd+3213485]
+	GetHandleVerifier [0x0x7ff7365a884e+184862]
+	GetHandleVerifier [0x0x7ff7365b055f+216879]
+	GetHandleVerifier [0x0x7ff736597084+113236]
+	GetHandleVerifier [0x0x7ff736597239+113673]
+	GetHandleVerifier [0x0x7ff73657e298+11368]
+	BaseThreadInitThunk [0x0x7ffede4d257d+29]
+	RtlUserThreadStart [0x0x7ffedf50af08+40]
+</msg>
 </errors>
 </robot>

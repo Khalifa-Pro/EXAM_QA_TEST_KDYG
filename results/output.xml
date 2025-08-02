@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-01T18:53:26.439385" rpa="false" schemaversion="5">
+<suite id="s1" name="YORO GUEYE KHALIFA ABABACAR DIADHIOU EXAMEN QA TEST M1GL" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL">
+<suite id="s1-s1" name="TEST LAB1" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB1">
+<suite id="s1-s1-s1" name="Testcases" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB1\testcases">
+<suite id="s1-s1-s1-s1" name="Users Tests" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB1\testcases\users_tests.robot">
+<kw name="Create Session To FakeStore" owner="users_keywords" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-08-01T18:53:28.867319" level="INFO">Creating Session using : alias=fakestore, url=https://fakestoreapi.com, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>fakestore</arg>
+<arg>${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-08-01T18:53:28.866416" elapsed="0.001595"/>
+</kw>
+<status status="PASS" start="2025-08-01T18:53:28.864607" elapsed="0.003725"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Add User - Valid" line="18">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-08-01T18:53:28.879685" level="INFO">${user} = {'email': 'test@test.com', 'username': 'testuser', 'password': 'testpass'}</msg>
+<var>${user}</var>
+<arg>email=test@test.com</arg>
+<arg>username=testuser</arg>
+<arg>password=testpass</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-08-01T18:53:28.877398" elapsed="0.003236"/>
+</kw>
+<kw name="Add a new user" owner="users_keywords">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-08-01T18:53:29.978043" level="INFO">POST Request : url=https://fakestoreapi.com/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '74'} 
+ body=b'{"email": "test@test.com", "username": "testuser", "password": "testpass"}' 
+ </msg>
+<msg time="2025-08-01T18:53:29.978886" level="INFO">POST Response : url=https://fakestoreapi.com/users 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 01 Aug 2025 18:53:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"9-hVv0cNJophUD7CGn+ZqXp8tVGo0"', 'X-Powered-By': 'Express', 'Cf-Cache-Status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=fIlPyNNON8qmSI6aILbwnq0cH%2FBa9EVYFG9HrhgLujAXb7T1VIkBilMRifVe3gdebocZl0PQjipZqAKWYPPb5wtHbvuJrL%2FQQXR575f4YFM%3D"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '968789e74cf32fa0-MAD', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"id":11} 
+ </msg>
+<msg time="2025-08-01T18:53:29.979586" level="INFO">C:\Users\FINAPPS\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'fakestoreapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-08-01T18:53:29.981972" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>fakestore</arg>
+<arg>/users</arg>
+<arg>json=${user}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-08-01T18:53:28.885229" elapsed="1.097783"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-08-01T18:53:29.986596" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-08-01T18:53:29.983718" elapsed="0.003719"/>
+</kw>
+<return>
+<value>${response.json()}</value>
+<status status="PASS" start="2025-08-01T18:53:29.987728" elapsed="0.000555"/>
+</return>
+<msg time="2025-08-01T18:53:29.991333" level="INFO">${response} = {'id': 11}</msg>
+<var>${response}</var>
+<arg>${user}</arg>
+<status status="PASS" start="2025-08-01T18:53:28.882772" elapsed="1.109717"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-08-01T18:53:29.996310" level="FAIL">Resolving variable '${response.status_code}' failed: AttributeError: 'dict' object has no attribute 'status_code'</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2025-08-01T18:53:29.994133" elapsed="0.012829">Resolving variable '${response.status_code}' failed: AttributeError: 'dict' object has no attribute 'status_code'</status>
+</kw>
+<tag>addpassed</tag>
+<tag>users</tag>
+<status status="FAIL" start="2025-08-01T18:53:28.868557" elapsed="1.142664">Resolving variable '${response.status_code}' failed: AttributeError: 'dict' object has no attribute 'status_code'</status>
+</test>
+<status status="FAIL" start="2025-08-01T18:53:26.610898" elapsed="3.438130"/>
+</suite>
+<status status="FAIL" start="2025-08-01T18:53:26.593597" elapsed="3.502153"/>
+</suite>
+<status status="FAIL" start="2025-08-01T18:53:26.570933" elapsed="3.542539"/>
+</suite>
+<status status="FAIL" start="2025-08-01T18:53:26.459929" elapsed="3.695517"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">addpassed</stat>
+<stat pass="0" fail="1" skip="0">users</stat>
+</tag>
+<suite>
+<stat name="YORO GUEYE KHALIFA ABABACAR DIADHIOU EXAMEN QA TEST M1GL" id="s1" pass="0" fail="1" skip="0">YORO GUEYE KHALIFA ABABACAR DIADHIOU EXAMEN QA TEST M1GL</stat>
+<stat name="TEST LAB1" id="s1-s1" pass="0" fail="1" skip="0">YORO GUEYE KHALIFA ABABACAR DIADHIOU EXAMEN QA TEST M1GL.TEST LAB1</stat>
+<stat name="Testcases" id="s1-s1-s1" pass="0" fail="1" skip="0">YORO GUEYE KHALIFA ABABACAR DIADHIOU EXAMEN QA TEST M1GL.TEST LAB1.Testcases</stat>
+<stat name="Users Tests" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">YORO GUEYE KHALIFA ABABACAR DIADHIOU EXAMEN QA TEST M1GL.TEST LAB1.Testcases.Users Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

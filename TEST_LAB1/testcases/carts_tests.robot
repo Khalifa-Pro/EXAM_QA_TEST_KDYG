@@ -6,7 +6,7 @@ Suite Setup    Setup All Sessions
 *** Keywords ***
 Setup All Sessions
     Create Session To FakeStore
-    Create Session To MongoDB
+    # Create Session To MongoDB
 
 *** Test Cases ***
 # ======================================
