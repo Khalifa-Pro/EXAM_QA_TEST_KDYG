@@ -33,7 +33,7 @@ Get Orders list failed
     [Tags]    smoke    negative1
     ${params}=    Create Dictionary    limit=5
     ${response}=    Get Orders    ${params}
-    Should Be Equal As Strings    ${response.status_code}    200
+    Should Be Equal As Integers    ${response.status_code}    200
     Should Not Be Empty    ${response}
     Log To Console    ${response}
 

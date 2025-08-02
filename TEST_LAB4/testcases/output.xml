@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-02T00:16:32.412143" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-02T11:54:22.111067" rpa="false" schemaversion="5">
 <suite id="s1" name="Mobile" source="C:\Users\FINAPPS\Desktop\ISI\MP1GL\TEST_LOGICIEL_QA\YORO_GUEYE_KHALIFA_ABABACAR_DIADHIOU_EXAMEN_QA_TEST_M1GL\TEST_LAB4\testcases\mobile.robot">
 <kw name="Run Keyword" owner="BuiltIn" type="SETUP">
 <kw name="Open Application MyApp" owner="common">
 <kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-08-02T11:54:55.203507" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-08-02T11:54:55.202563" elapsed="0.022380">No application is open</status>
+</kw>
+<msg time="2025-08-02T11:54:55.229467" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-08-02T11:54:55.230490" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</msg>
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=${PLATFORM_NAME}</arg>
 <arg>deviceName=${DEVICE_NAME}</arg>
@@ -18,215 +29,64 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-08-02T00:16:32.981309" elapsed="5.270370"/>
+<status status="FAIL" start="2025-08-02T11:54:22.645215" elapsed="32.591280">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
 </kw>
-<status status="PASS" start="2025-08-02T00:16:32.981019" elapsed="5.271128"/>
+<status status="FAIL" start="2025-08-02T11:54:22.644973" elapsed="32.591931">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
 </kw>
 <arg>Open Application MyApp</arg>
 <doc>Executes the given keyword with the given arguments.</doc>
-<status status="PASS" start="2025-08-02T00:16:32.980529" elapsed="5.271826"/>
+<status status="FAIL" start="2025-08-02T11:54:22.644486" elapsed="32.592536">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
 </kw>
 <test id="s1-t1" name="Open Application and Login" line="12">
-<kw name="Enter username" owner="common">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${USERNAME}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:38.254826" elapsed="0.145871"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:38.406330" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(0)'.</msg>
-<arg>${USERNAME}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:38.401290" elapsed="0.195718"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:38.600186" level="INFO">Typing text 'johnd' into text field 'android=new UiSelector().className("android.widget.EditText").instance(0)'</msg>
-<arg>${USERNAME}</arg>
-<arg>johnd</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:38.597261" elapsed="1.635263"/>
-</kw>
-<status status="PASS" start="2025-08-02T00:16:38.253968" elapsed="1.978852"/>
-</kw>
-<kw name="Enter password" owner="common">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${PASSWORD}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:40.234181" elapsed="0.612187"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:40.849123" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(1)'.</msg>
-<arg>${PASSWORD}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:40.846635" elapsed="0.189683"/>
-</kw>
-<kw name="Input Password" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:41.039098" level="INFO">Typing password into text field 'android=new UiSelector().className("android.widget.EditText").instance(1)'</msg>
-<arg>${PASSWORD}</arg>
-<arg>m38rmF$</arg>
-<doc>Types the given password into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:41.036685" elapsed="1.052398"/>
-</kw>
-<status status="PASS" start="2025-08-02T00:16:40.233551" elapsed="1.855797"/>
-</kw>
-<kw name="Log In" owner="common">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${LOGIN}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:42.092736" elapsed="0.604430"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:42.700961" level="INFO">Clicking element 'accessibility_id=Se connecter'.</msg>
-<arg>${LOGIN}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:42.697532" elapsed="0.171348"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<arg>${PAGE_FORM}</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2025-08-02T00:16:42.869177" elapsed="1.586313"/>
-</kw>
-<status status="PASS" start="2025-08-02T00:16:42.090743" elapsed="2.365027"/>
-</kw>
 <tag>"init"</tag>
-<status status="PASS" start="2025-08-02T00:16:38.252619" elapsed="6.203835"/>
+<status status="FAIL" start="2025-08-02T11:54:55.237240" elapsed="0.001319">Parent suite setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
 </test>
 <test id="s1-t2" name="Fill Form" line="18">
-<kw name="Enter Form Details" owner="common">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${FORM_TITLE}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:44.459893" elapsed="0.116284"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:44.579833" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(0)'.</msg>
-<arg>${FORM_TITLE}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:44.576584" elapsed="1.154612"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:45.734729" level="INFO">Typing text 'Test Form Title' into text field 'android=new UiSelector().className("android.widget.EditText").instance(0)'</msg>
-<arg>${FORM_TITLE}</arg>
-<arg>Test Form Title</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:45.731683" elapsed="0.132232"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${FORM_PRICE}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:45.864297" elapsed="1.062539"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:46.931947" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(1)'.</msg>
-<arg>${FORM_PRICE}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:46.927196" elapsed="0.176938"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:47.107911" level="INFO">Typing text '100' into text field 'android=new UiSelector().className("android.widget.EditText").instance(1)'</msg>
-<arg>${FORM_PRICE}</arg>
-<arg>100</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:47.104689" elapsed="0.829047"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${FORM_DESCRIPTION}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:47.934325" elapsed="1.124097"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:49.064543" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(2)'.</msg>
-<arg>${FORM_DESCRIPTION}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:49.058998" elapsed="0.196831"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:49.264691" level="INFO">Typing text 'This is a test description.' into text field 'android=new UiSelector().className("android.widget.EditText").instance(2)'</msg>
-<arg>${FORM_DESCRIPTION}</arg>
-<arg>This is a test description.</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:49.256303" elapsed="0.755723"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${FORM_CATEGORIE}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:50.012940" elapsed="1.041344"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:51.059864" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(3)'.</msg>
-<arg>${FORM_CATEGORIE}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:51.054754" elapsed="0.178008"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:51.237469" level="INFO">Typing text 'Test Category' into text field 'android=new UiSelector().className("android.widget.EditText").instance(3)'</msg>
-<arg>${FORM_CATEGORIE}</arg>
-<arg>Test Category</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:51.233314" elapsed="0.762441"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${FORM_URL}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:51.996262" elapsed="0.971545"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:52.971655" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(4)'.</msg>
-<arg>${FORM_URL}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:52.968298" elapsed="0.165806"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:53.139755" level="INFO">Typing text '"C:UsersFINAPPSPicturesScreenshotsCapture d'écran 2025-05-17 194829.png"' into text field 'android=new UiSelector().className("android.widget.EditText").instance(4)'</msg>
-<arg>${FORM_URL}</arg>
-<arg>"C:\Users\FINAPPS\Pictures\Screenshots\Capture d'écran 2025-05-17 194829.png"</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:53.134729" elapsed="0.722551"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${FORM_BUTTON_ADD}</arg>
-<arg>5</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-02T00:16:53.857931" elapsed="0.744353"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-02T00:16:54.605942" level="INFO">Clicking element 'accessibility_id=Ajouter'.</msg>
-<arg>${FORM_BUTTON_ADD}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-02T00:16:54.602744" elapsed="0.647386"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<arg>${PAGE_FORM}</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2025-08-02T00:16:55.250469" elapsed="1.109289"/>
-</kw>
-<status status="PASS" start="2025-08-02T00:16:44.459502" elapsed="11.900588"/>
-</kw>
 <tag>"form"</tag>
-<status status="PASS" start="2025-08-02T00:16:44.458381" elapsed="11.902458"/>
+<status status="FAIL" start="2025-08-02T11:54:55.240988" elapsed="0.001056">Parent suite setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
 </test>
-<status status="PASS" start="2025-08-02T00:16:32.415527" elapsed="23.947469"/>
+<status status="FAIL" start="2025-08-02T11:54:22.113668" elapsed="33.131506">Suite setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\FINAPPS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">"form"</stat>
-<stat pass="1" fail="0" skip="0">"init"</stat>
+<stat pass="0" fail="1" skip="0">"form"</stat>
+<stat pass="0" fail="1" skip="0">"init"</stat>
 </tag>
 <suite>
-<stat name="Mobile" id="s1" pass="2" fail="0" skip="0">Mobile</stat>
+<stat name="Mobile" id="s1" pass="0" fail="2" skip="0">Mobile</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-08-02T11:54:55.229467" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
